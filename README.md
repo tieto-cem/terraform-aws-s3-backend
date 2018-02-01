@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/tieto-cem/terraform-aws-s3-backend.svg?style=svg&circle-token=d3789dd28673fbbd6642eb9701a2f0118cf3e904)](https://circleci.com/gh/tieto-cem/terraform-aws-s3-backend)
+[![CircleCI](https://circleci.com/gh/tieto-cem/terraform-aws-s3-backend.svg?style=shield&circle-token=d3789dd28673fbbd6642eb9701a2f0118cf3e904)](https://circleci.com/gh/tieto-cem/terraform-aws-s3-backend)
 
 Terraform S3 backend module
 ===========================================
