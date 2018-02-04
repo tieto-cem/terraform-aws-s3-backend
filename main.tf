@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "terraform_state_bucket" {
 }
 
 resource "aws_s3_bucket" "terraform_state_access_log_bucket" {
-  bucket = "${aws_s3_bucket.terraform_state_bucket.bucket}-access-logs"
+  bucket_prefix = "${var.state_bucket_name_prefix}-access-logs"
   acl    = "log-delivery-write"
   force_destroy = true
 }

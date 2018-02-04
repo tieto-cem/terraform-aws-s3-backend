@@ -26,11 +26,11 @@ Resource naming
 
 This module names AWS resources as follows:
 
-| Name                                       | Type                      | 
-|--------------------------------------------|---------------------------|
-|${var.state_bucket_name_prefix}...          | S3 bucket                 |
-|${state_bucket_name}-access-logs            | S3 bucket for access logs |
-|${var.lock_table_name}                      | DynamoDB table            |
+| Name                                          | Type                      | 
+|-----------------------------------------------|---------------------------|
+|${var.state_bucket_name_prefix}...             | S3 bucket                 |
+|${var.state_bucket_name_prefix}-access-logs... | S3 bucket for access logs |
+|${var.lock_table_name}                         | DynamoDB table            |
 
 
 Examples
