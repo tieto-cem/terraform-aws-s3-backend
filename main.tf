@@ -1,6 +1,6 @@
 
 resource "aws_s3_bucket" "terraform_state_bucket" {
-  bucket_prefix = "${var.state_bucket_name_prefix}"
+  bucket_prefix = "${var.state_bucket_name_prefix}-"
   acl    = "private"
   force_destroy = false
 
@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "terraform_state_bucket" {
 }
 
 resource "aws_s3_bucket" "terraform_state_access_log_bucket" {
-  bucket_prefix = "${var.state_bucket_name_prefix}-access-logs"
+  bucket_prefix = "${var.state_bucket_name_prefix}-access-logs-"
   acl    = "log-delivery-write"
   force_destroy = true
 }
