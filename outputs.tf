@@ -1,6 +1,6 @@
 output "state_bucket_name" {
   description = "S3 bucket name"
-  value       = "${aws_s3_bucket.terraform_state_bucket.bucket}"
+  value = "${coalesce(join("", aws_s3_bucket.state_bucket.*.bucket), join("", aws_s3_bucket.state_bucket_prefixed.*.bucket))}"
 }
 
 output "lock_table_name" {

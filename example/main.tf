@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "terraform_s3_backend" {
-  source                   = ".."
-  state_bucket_name_prefix = "myapp-terraform-state-bucket"
-  state_lock_table_name    = "myapp-terraform-state-lock-table"
+  source              = ".."
+  bucket_name         = "myapp-terraform-state-bucket"
+  dynamodb_table_name = "myapp-terraform-state-lock-table"
 }

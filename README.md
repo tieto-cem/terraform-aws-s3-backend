@@ -15,9 +15,9 @@ provider "aws" {
 }
 
 module "terraform_s3_backend" {
-  source                   = "github.com/tieto-cem/terraform-aws-s3-backend?ref=v0.1.3"
-  state_bucket_name_prefix = "myapp-terraform-state-bucket"
-  state_lock_table_name    = "myapp-terraform-state-lock-table"
+  source              = "github.com/tieto-cem/terraform-aws-s3-backend?ref=v0.1.3"
+  bucket_name         = "myapp-terraform-state-bucket"
+  dynamodb_table_name = "myapp-terraform-state-lock-table"
 }
 ```
 
@@ -26,11 +26,11 @@ Resource naming
 
 This module names AWS resources as follows:
 
-| Name                                           | Type                      | 
-|----------------------------------------------- |---------------------------|
-|${var.state_bucket_name_prefix}-...             | S3 bucket                 |
-|${var.state_bucket_name_prefix}-access-logs-... | S3 bucket for access logs |
-|${var.state_lock_table_name}                    | DynamoDB table            |
+| Name                              | Type                      | 
+|-----------------------------------|---------------------------|
+|${var.bucket_name}-...             | S3 bucket                 |
+|${var.bucket_name}-access-logs-... | S3 bucket for access logs |
+|${var.dynamodb_table_name}         | DynamoDB table            |
 
 
 Examples
