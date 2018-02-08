@@ -4,6 +4,6 @@ provider "aws" {
 
 module "terraform_s3_backend" {
   source              = ".."
-  bucket_name         = "myapp-terraform-state-bucket"
-  dynamodb_table_name = "myapp-terraform-state-lock-table"
+  bucket_name         = "myapp-state-bucket"
+  dynamodb_table_name = "myapp-lock-table"
 }

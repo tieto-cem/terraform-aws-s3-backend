@@ -1,6 +1,5 @@
-
 resource "aws_s3_bucket" "state_bucket_prefixed" {
-  count = "${var.bucket_name_uuid_suffix ? 1 : 0}"
+  count         = "${var.bucket_name_uuid_suffix ? 1 : 0}"
   bucket_prefix = "${var.bucket_name}-"
   acl           = "private"
   force_destroy = "${var.bucket_force_destroy}"
@@ -16,8 +15,8 @@ resource "aws_s3_bucket" "state_bucket_prefixed" {
 }
 
 resource "aws_s3_bucket" "state_bucket" {
-  count = "${var.bucket_name_uuid_suffix ? 0 : 1}"
-  bucket_name = "${var.bucket_name}"
+  count         = "${var.bucket_name_uuid_suffix ? 0 : 1}"
+  bucket        = "${var.bucket_name}"
   acl           = "private"
   force_destroy = "${var.bucket_force_destroy}"
 
